@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link rel="stylesheet" href="style.css">
+  
+  </head>
+
+  <body>
+    <h1>arrayPairOfElementsCondition</h1>
+    
+    <script type="text/javascript" charset="utf-8">
+      
+      var numbers = [10,20,10,40,50,60,70], 
+          target  = 50 ;
+                    
+      function find_arr ( arr , target ) {
+       let result = [];
+       
+       for ( let el1 of arr ) { 
+        arr.find( ( el2 ) => {
+          if( ( el1 + el2 ) == target ) {
+            if( ( result.indexOf(el1) == -1 ) || ( result.indexOf(el2) == -1 ) ) {
+              console.log(el1 + " " + el2);
+              result.push( arr.indexOf(el1) );
+              result.push( arr.indexOf(el2) );
+            }
+          }
+          // 
+          } );
+       }
+        return result;
+      }
+      
+      console.log( find_arr( numbers , target ) ) ;
+    </script>
+  </body>
+
+</html>
